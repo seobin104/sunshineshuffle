@@ -199,10 +199,6 @@ h1, h2, h3 { font-family: var(--display); text-wrap: balance; margin: 0; letter-
 .proof-card .body { padding: 1.2rem 1.3rem 1.4rem; }
 .proof-card .body h4 { font-size: 1.05rem; font-weight: 700; line-height: 1.4; }
 .proof-card .metric { margin-top: 0.7rem; font-size: 0.9rem; font-weight: 600; color: var(--text-dim); }
-.comment-chip { margin-top: clamp(2rem, 5vw, 3rem); border: 1px solid var(--line); border-radius: 1rem; padding: 1.6rem 1.8rem; display: flex; gap: 1rem; align-items: flex-start; background: var(--bg-alt); }
-.comment-chip .tagline { font-size: 0.85rem; font-weight: 700; color: var(--volt); margin-bottom: 0.5rem; }
-.comment-chip p { margin: 0; font-size: 1.1rem; font-weight: 600; }
-.comment-chip .who { color: var(--text-dim); font-size: 0.85rem; margin-top: 0.4rem; }
 
 /* ---------- Film-strip gallery ---------- */
 .filmstrip { display: flex; gap: 1.1rem; overflow-x: auto; padding: 0.5rem var(--gap) 1.4rem; margin: 0 calc(var(--gap) * -1); scroll-snap-type: x mandatory; scrollbar-width: none; cursor: grab; user-select: none; }
@@ -235,7 +231,25 @@ h1, h2, h3 { font-family: var(--display); text-wrap: balance; margin: 0; letter-
 .loc-row .v { font-size: 1rem; }
 .loc-map-frame { border-radius: 1rem; border: 1px solid var(--line); overflow: hidden; aspect-ratio: 4/3; position: relative; background: var(--bg-alt); }
 .loc-map-frame img { width: 100%; height: 100%; object-fit: cover; filter: saturate(0.9); }
-.loc-map-frame .credit { position: absolute; right: 0.6rem; bottom: 0.5rem; font-size: 0.68rem; color: rgba(255,255,255,0.8); background: rgba(0,0,0,0.4); padding: 0.15rem 0.5rem; border-radius: 999px; }
+.loc-sketch { width: 100%; height: 100%; display: block; background: var(--bg-alt); font-family: var(--display); }
+.m-road { stroke: color-mix(in srgb, var(--text) 22%, transparent); stroke-width: 18; stroke-linecap: round; }
+.m-road-major { stroke-width: 30; }
+.m-road-minor { stroke-width: 10; stroke: color-mix(in srgb, var(--text) 14%, transparent); }
+.m-roadlabel { fill: var(--text-dim); font-size: 22px; font-weight: 700; letter-spacing: 0.2em; }
+.m-roadlabel.m-small { font-size: 17px; letter-spacing: 0.05em; }
+.m-block { fill: color-mix(in srgb, var(--text) 9%, transparent); }
+.m-block.m-green { fill: color-mix(in srgb, #3fae6a 26%, transparent); }
+.m-label { fill: var(--text); font-size: 19px; font-weight: 700; }
+.m-label.m-sub { fill: var(--text-dim); font-size: 16px; font-weight: 600; }
+.m-halo { fill: color-mix(in srgb, var(--volt) 18%, transparent); animation: halopulse 2.4s ease-in-out infinite; transform-origin: 500px 252px; }
+@keyframes halopulse { 0%,100% { transform: scale(0.92); opacity: 0.7; } 50% { transform: scale(1.06); opacity: 1; } }
+.m-pin { fill: var(--volt); }
+.m-pin-dot { fill: var(--volt-ink); }
+.m-title { fill: var(--text); font-size: 30px; font-weight: 800; }
+.m-chip { fill: color-mix(in srgb, var(--text) 10%, transparent); }
+.m-chiptext { fill: var(--text); font-size: 17px; font-weight: 700; }
+.m-north { fill: var(--text-dim); font-size: 18px; font-weight: 700; }
+.m-north.m-small { font-size: 14px; }
 
 /* ---------- Final CTA ---------- */
 .cta-band { text-align: center; padding: clamp(5rem, 11vw, 8rem) var(--gap); border-radius: 1.4rem; margin: 0 var(--gap); background: var(--bg-alt); border: 1px solid var(--line); }

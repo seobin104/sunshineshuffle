@@ -142,24 +142,32 @@ if (filmstrip) {
   });
 
   // pointer drag-to-scroll for mouse/trackpad users
+  // NOTE: pointer capture must start only after real movement — capturing on
+  // pointerdown retargets the click event and silently kills link navigation.
   let isDown = false;
   let startX = 0;
   let startScroll = 0;
   let dragMoved = 0;
+  let activePointer = null;
   filmstrip.addEventListener("pointerdown", (e) => {
     if (e.pointerType === "touch") return; // native touch scroll is already fine
     isDown = true;
     dragMoved = 0;
-    filmstrip.classList.add("is-dragging");
     startX = e.clientX;
     startScroll = filmstrip.scrollLeft;
-    filmstrip.setPointerCapture(e.pointerId);
+    activePointer = e.pointerId;
   });
   filmstrip.addEventListener("pointermove", (e) => {
     if (!isDown) return;
     const delta = e.clientX - startX;
     dragMoved = Math.max(dragMoved, Math.abs(delta));
-    filmstrip.scrollLeft = startScroll - delta;
+    if (dragMoved > 6) {
+      if (activePointer != null && !filmstrip.hasPointerCapture(activePointer)) {
+        filmstrip.setPointerCapture(activePointer);
+        filmstrip.classList.add("is-dragging");
+      }
+      filmstrip.scrollLeft = startScroll - delta;
+    }
   });
   const endDrag = () => { isDown = false; filmstrip.classList.remove("is-dragging"); };
   filmstrip.addEventListener("pointerup", endDrag);
