@@ -204,15 +204,6 @@ h1, h2, h3 { font-family: var(--display); text-wrap: balance; margin: 0; letter-
 .why-card h3 { font-size: 1.18rem; font-weight: 800; margin-top: 1rem; }
 .why-card p { color: var(--text-dim); font-size: 0.98rem; margin: 0.6rem 0 0; }
 
-/* ---------- Proof / real-numbers section (honest "후기") ---------- */
-.proof-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; }
-.proof-card { border: 1px solid var(--line); border-radius: 1rem; overflow: hidden; background: var(--bg-alt); display: block; transition: transform 0.2s ease, border-color 0.2s ease; }
-.proof-card:hover { transform: translateY(-3px); border-color: var(--text-dim); }
-.proof-card .thumb { aspect-ratio: 16/10; overflow: hidden; }
-.proof-card .thumb img { width: 100%; height: 100%; object-fit: cover; }
-.proof-card .body { padding: 1.2rem 1.3rem 1.4rem; }
-.proof-card .body h4 { font-size: 1.05rem; font-weight: 700; line-height: 1.4; }
-.proof-card .metric { margin-top: 0.7rem; font-size: 0.9rem; font-weight: 600; color: var(--text-dim); }
 
 /* ---------- Film-strip gallery ---------- */
 .filmstrip { display: flex; gap: 1.1rem; overflow-x: auto; padding: 0.5rem var(--gap) 1.4rem; margin: 0 calc(var(--gap) * -1); scroll-snap-type: x mandatory; scrollbar-width: none; cursor: grab; user-select: none; }
@@ -299,7 +290,6 @@ footer { border-top: 1px solid var(--line); padding: 3rem var(--gap) 6.5rem; mar
   .about-grid { grid-template-columns: 1fr; }
   .why-grid { grid-template-columns: repeat(2, 1fr); }
   .why-card:nth-child(1), .why-card:nth-child(4) { grid-column: span 2; }
-  .proof-grid { grid-template-columns: 1fr; }
     .ticker-grid { grid-template-columns: repeat(2, 1fr); row-gap: 1.6rem; }
   .mobile-cta { display: flex; }
   .film-arrow { width: 2.4rem; height: 2.4rem; font-size: 1.1rem; }
