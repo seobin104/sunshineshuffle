@@ -185,25 +185,17 @@
 
   <!-- ================= LOCATION ================= -->
   <section class="section" id="location">
-    <div class="wrap loc-grid">
-      <div class="reveal">
+    <div class="wrap">
+      <div class="section-head reveal">
         <span class="eyebrow">오시는 길</span>
-        <h2 style="font-size:2rem; margin-top:0.7rem;">전남 순천 연향동, 선샤인셔플</h2>
-        <div class="loc-card" style="margin-top:1.6rem;">
-          <div class="loc-row"><div class="k">주소</div><div class="v">전남 순천시 팔마4길 40 상가동 2층 201호<br>(연향동 1660-2)</div></div>
-          <div class="loc-row"><div class="k">전화</div><div class="v"><a href="tel:0504-0666-3770">0504-0666-3770</a></div></div>
-          <div class="loc-row"><div class="k">카카오톡</div><div class="v"><a href="tel:010-2902-9988">010-2902-9988</a></div></div>
-          <div class="loc-row"><div class="k">인스타그램</div><div class="v"><a href="https://www.instagram.com/sunshine_shuffle" target="_blank" rel="noopener">@sunshine_shuffle</a></div></div>
-          <div class="loc-row"><div class="k">시설</div><div class="v">무료 주차 · 남녀 화장실 구분</div></div>
-        </div>
-        <div class="btn-row" style="margin-top:1.4rem;">
-          <a class="btn btn-primary" href="https://map.naver.com/p/entry/place/2064690010?placePath=%2Fhome%3Fentry%3Dplt%26from%3Dmap%26fromPanelNum%3D1%26additionalHeight%3D76%26locale%3Dko%26svcName%3Dmap_pcv5&searchType=place&lng=127.5149059&lat=34.9344789" target="_blank" rel="noopener">네이버지도에서 보기</a>
-          <a class="btn btn-ghost" href="https://cafe.naver.com/sunshineshuffle" target="_blank" rel="noopener">네이버 카페 방문</a>
-        </div>
+        <h2>전남 순천 연향동, 선샤인셔플</h2>
       </div>
       <div class="loc-map-frame reveal">
-        <img class="loc-photo" src="assets/img/map-custom.png" alt="선샤인셔플 위치 약도"
-             onerror="if(!this.dataset.t){this.dataset.t=1;this.src='assets/img/map-custom.jpg'}else{this.remove()}" />
+        <a class="loc-photo-link" href="assets/img/map-custom.png" target="_blank" rel="noopener" aria-label="약도 크게 보기">
+          <img class="loc-photo" src="assets/img/map-custom.png" alt="선샤인셔플 위치 약도"
+               onerror="if(!this.dataset.t){this.dataset.t=1;this.src='assets/img/map-custom.jpg'}else{this.closest('a').remove()}" />
+          <span class="loc-zoom">🔍 크게 보기</span>
+        </a>
         <svg class="loc-sketch" viewBox="0 0 800 600" role="img" aria-label="선샤인셔플 위치 약도 — 팔마로와 남승룡로 사이, 팔마4길 40 상가동 2층">
           <!-- roads -->
           <line class="m-road m-road-major" x1="0" y1="92" x2="800" y2="92" />
@@ -242,6 +234,10 @@
           <text class="m-north" x="762" y="52" text-anchor="middle">▲</text>
           <text class="m-north m-small" x="762" y="30" text-anchor="middle">N</text>
         </svg>
+      </div>
+      <div class="btn-row reveal" style="margin-top:1.8rem; justify-content:center;">
+        <a class="btn btn-primary" href="https://map.naver.com/p/entry/place/2064690010?placePath=%2Fhome%3Fentry%3Dplt%26from%3Dmap%26fromPanelNum%3D1%26additionalHeight%3D76%26locale%3Dko%26svcName%3Dmap_pcv5&searchType=place&lng=127.5149059&lat=34.9344789" target="_blank" rel="noopener">네이버지도에서 보기</a>
+        <a class="btn btn-ghost" href="https://cafe.naver.com/sunshineshuffle" target="_blank" rel="noopener">네이버 카페 방문</a>
       </div>
     </div>
   </section>
